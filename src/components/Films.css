@@ -1,0 +1,23 @@
+.description-movie{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-header {
+  font-family: ubuntu;
+  font-weight: 100;
+  margin: 20px;
+  font-size: 22px;
+  color: #666666;
+  padding-left: 15px;
+  padding-top: 30px;
+}
+
+.movie-section{
+}
+
+.image-film{
+  border-bottom-color: black;
+  border-bottom-width: 10px;
+}

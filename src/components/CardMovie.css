@@ -1,0 +1,34 @@
+main {
+  font-weight: 100;
+  margin: 20px;
+  font-size: 22px;
+  color: #666666;
+}
+
+#card-film {
+  background: #ffffff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  height: 400px;
+  font-family: ubuntu;
+}
+
+#card-title {
+  font-size: 26px;
+  color: #009cda;;
+}
+
+#card-content {
+  border-top: 8px, linear-gradient(90deg, #eb5757, #f2994a);
+}
+
+#card-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40%;
+    white-space: nowrap;
+}
+#info-film {
+  position: absolute;
+    bottom: 10px;
+}
