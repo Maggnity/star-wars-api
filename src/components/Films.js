@@ -5,6 +5,24 @@ import LogoStar from "./../assets/img/star.svg";
 import "./Films.css";
 import CardExampleCard from "./CardMovie";
 
+const responsiveSwiper = {
+  // when window width is >= 320px
+  320: {
+   slidesPerView: 1,
+   spaceBetween: 20,
+ },
+ // when window width is >= 480px
+ 480: {
+   slidesPerView: 2,
+   spaceBetween: 30,
+ },
+ // when window width is >= 640px
+ 640: {
+   slidesPerView: 3,
+   spaceBetween: 40,
+ },
+}
+
 export default function Films({ data }) {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState([true]);
@@ -32,18 +50,20 @@ export default function Films({ data }) {
       </Header>
       
       <Swiper
+        id="swiper"
         loop={true}
-        spaceBetween={30}
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
         style={{ padding: "20px" }}
+        breakpoints={responsiveSwiper}
       >
         {films
           ? films.map((films, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="swiper-slide">
                   <CardExampleCard 
+                    
                     title={films.title}
                     description={films.opening_crawl}
                     date={films.release_date}

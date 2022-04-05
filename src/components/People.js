@@ -10,7 +10,6 @@ import CardPeople from "./CardPeople";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
-
 export default function People({ data }) {
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState([true]);
@@ -26,7 +25,23 @@ export default function People({ data }) {
     fetchPeople();
   }, []);
 
-  console.log("data", people);
+  const responsiveSwiper = {
+     // when window width is >= 320px
+     320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  }
 
   return (
     <section>
@@ -35,6 +50,7 @@ export default function People({ data }) {
           <img src={Friends}></img> People
         </h2>
       </Header>
+
       <Swiper
         loop={true}
         spaceBetween={30}
@@ -42,6 +58,7 @@ export default function People({ data }) {
         navigation
         pagination={{ clickable: true }}
         style={{ padding: "20px" }}
+        breakpoints={responsiveSwiper}
       >
         {people
           ? people.map((people, index) => {
