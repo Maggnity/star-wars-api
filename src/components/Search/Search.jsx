@@ -16,8 +16,8 @@ function Search() {
   return (
       <Container component="article" maxWidth="sm">
         <Form
-          style={{ alignItems: "center",
-        borderColor:"lightseagreen" }}
+        className="form-search"
+          style={{ alignItems: "center"}}
           onSubmit={(event) => {
             event.preventDefault();
           }}
