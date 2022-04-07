@@ -1,0 +1,12 @@
+.lista-comments {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.lista-comments_item {
+  width: 100%;
+  list-style-type: none;
+  display: inline;
+  padding-bottom: 10px;
+}

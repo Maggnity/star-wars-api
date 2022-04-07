@@ -1,30 +1,21 @@
-import Search from "../Search";
-import styled from "styled-components";
-import background from "../../assets/img/topImage.png";
+import Search from "../Search/Search";
 import React from "react";
-
-
-const Background = styled.div`
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-`;
+import './HeaderBackground.css'
+import { Typography } from "@material-ui/core";
+import { Container } from "semantic-ui-react";
 
 
 
-function Head({title, description}) {
+function Head() {
   return (
-    <Background>
-      <section
-        className="cabecalho"
-        style={{ verticalAlign: "middle", padding: "80px" }}
-        margin
-      >
-        <h2 class="title">Star Wars Movie</h2>
-        <Search />
-      </section>
-    </Background>
+    <section id="head" className="head">
+      <Container id="head-content">
+          <Typography class="title" width="100%">
+            Star Wars Movie
+          </Typography>
+          <Search />
+      </Container>
+    </section>
   );
 }
 

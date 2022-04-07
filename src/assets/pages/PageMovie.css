@@ -1,0 +1,11 @@
+
+#head-film {
+    background-image: url("./../../assets/img/image-film.svg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+}

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
-import Filter from "./../assets/img/filter.png";
-import LogoDate from "./../assets/img/calendar-icon.svg";
-import LogoChair from "./../assets/img/chair-director.svg";
+import Filter from "../../assets/img/filter.png";
+import LogoDate from "../../assets/img/calendar-icon.svg";
+import LogoChair from "../../assets/img/chair-director.svg";
 import { Routers, Link } from "react-router-dom";
 import './CardMovie.css'
 
@@ -12,6 +12,7 @@ function goMovie() {
     <Link to="/pagemovie"/>
     )
 }
+
 
 const CardExampleCard = ({ title, description, date, director }) => (
   <Link to="/pagemovie">
@@ -33,11 +34,11 @@ const CardExampleCard = ({ title, description, date, director }) => (
       <Card.Description id="card-description" content={description} />
       <div id="info-film">
       <Card.Description id="director">
-        <img src={LogoChair} alt="Logo diretor" />
+        <img className="info-logo" src={LogoChair} alt="Logo diretor" />
         {director}
       </Card.Description>
       <Card.Description>
-        <img src={LogoDate} alt="Logo calendário" />
+        <img className="info-logo" src={LogoDate} alt="Logo calendário" />
         {date}
       </Card.Description>
       </div>

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import { Container, Header, Icon } from "semantic-ui-react";
-import Friends from "./../assets/img/user-friends.svg";
+import Friends from "../../assets/img/user-friends.svg";
+import CardPeople from "../CardPeople/CardPeople";
 import "./People.css";
-import CardPeople from "./CardPeople";
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
@@ -36,8 +36,13 @@ export default function People({ data }) {
       slidesPerView: 2,
       spaceBetween: 30,
     },
+    // when window width is >= 480px
+    580: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
     // when window width is >= 640px
-    640: {
+    700: {
       slidesPerView: 4,
       spaceBetween: 40,
     },
@@ -50,7 +55,7 @@ export default function People({ data }) {
           <img src={Friends}></img> People
         </h2>
       </Header>
-
+ 
       <Swiper
         loop={true}
         spaceBetween={30}

@@ -9,8 +9,9 @@ main {
   background: #ffffff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  height: 400px;
+  height: 70vh;
   font-family: ubuntu;
+  width: 100%;
 }
 
 #card-title {
@@ -18,17 +19,26 @@ main {
   color: #009cda;;
 }
 
-#card-content {
-  border-top: 8px, linear-gradient(90deg, #eb5757, #f2994a);
-}
+
 
 #card-description{
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 40%;
-    white-space: nowrap;
+    max-width: 55vh;
+    max-height: 15vh;
+    white-space: normal;
 }
 #info-film {
   position: absolute;
     bottom: 10px;
+    color: #666666;
+    font-weight: 700, bold;
+}
+
+.info-logo {
+  padding-right: 10px;
+}
+
+.image-film {
+  border-image: solid, 6px linear-gradient(64.17deg, #FF5A56 15.66%, #FF9A42 83.04%) ;
 }

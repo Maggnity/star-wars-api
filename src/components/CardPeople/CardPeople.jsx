@@ -1,14 +1,14 @@
 import React from "react";
-import User from "./../assets/img/user-circle.svg";
+import User from "../../assets/img/user-circle.svg";
 import { Card, Icon, Image } from "semantic-ui-react";
-import MapMarker from "./../assets/img/map-marker-alt.svg";
+import MapMarker from "../../assets/img/map-marker-alt.svg";
 import "./CardPeople.css";
 //import { Router, Routes, Route } from "react-router-dom";
 
 const CardPeople = ({ name, homeworld }) => (
 
       <Card id="card-people" className="card-people">
-        <Card.Content>
+        <Card.Content className="card-content">
           <Image>
             <img src={User}></img>
           </Image>

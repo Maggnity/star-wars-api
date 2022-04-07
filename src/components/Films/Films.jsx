@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Header, Icon } from "semantic-ui-react";
-import LogoStar from "./../assets/img/star.svg";
+import LogoStar from "../../assets/img/star.svg";
 import "./Films.css";
-import CardExampleCard from "./CardMovie";
+import CardExampleCard from "../CardMovie/CardMovie";
+import LoadingFilm from "../CardLoading/LoadingFilm";
+import ContentLoader from "react-content-loader";
 
 const responsiveSwiper = {
   // when window width is >= 320px
@@ -17,23 +19,21 @@ const responsiveSwiper = {
    spaceBetween: 30,
  },
  // when window width is >= 640px
- 640: {
+ 700: {
    slidesPerView: 3,
    spaceBetween: 40,
  },
 }
 
-export default function Films({ data }) {
+export default function Films({ }) {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState([true]);
-  console.log("data", films);
-
+  
   useEffect(() => {
     async function fetchFilms() {
       let res = await fetch("https://swapi.dev/api/films/?format=json");
       let data = await res.json();
       setFilms(data.results);
-      setLoading(false);
     }
 
     fetchFilms();
@@ -43,6 +43,7 @@ export default function Films({ data }) {
 
   return (
     <section className="movie-section">
+      
       <Header>
         <h2 className="movie-header">
           <img src={LogoStar}></img> Movies
@@ -55,12 +56,13 @@ export default function Films({ data }) {
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
-        style={{ padding: "20px" }}
+        style={{ padding: "20px" }}F
         breakpoints={responsiveSwiper}
       >
         {films
           ? films.map((films, index) => {
               return (
+                <>
                 <SwiperSlide key={index} className="swiper-slide">
                   <CardExampleCard 
                     
@@ -71,9 +73,11 @@ export default function Films({ data }) {
                     /> 
                    
                 </SwiperSlide>
+                
+                    </>
               );
             })
-          : "Loading"}
+          : "loading"}
       </Swiper>
     </section>
   );

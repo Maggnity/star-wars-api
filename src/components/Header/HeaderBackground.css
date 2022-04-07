@@ -1,0 +1,24 @@
+.title {
+    background: linear-gradient(64.17deg, #FF5A56 15.66%, #FF9A42 83.04%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+
+#head {
+    background-image: url("./../../assets/img/topImage.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#head-content {
+    align-items: center;
+    justify-content: center;
+}
