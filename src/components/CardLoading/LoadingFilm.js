@@ -18,7 +18,6 @@ export default function LoadingFilm() {
     <rect x="13" y="375" rx="0" ry="0" width="107" height="13" /> 
     <rect x="15" y="242" rx="0" ry="0" width="250" height="15" /> 
     <rect x="15" y="272" rx="0" ry="0" width="250" height="15" /> 
-    <rect x="142" y="303" rx="0" ry="0" width="128" height="83" /> 
     <rect x="235" y="348" rx="0" ry="0" width="0" height="1" />
   </ContentLoader>
      

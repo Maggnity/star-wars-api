@@ -9,7 +9,7 @@ import "./People.css";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
-export default function People({}) {
+export default function People() {
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState([true]);
   try {
@@ -53,7 +53,8 @@ export default function People({}) {
   function SwiperPeople() {
     return (
       <Swiper
-        loop={true}
+      className="swiper-people"  
+      loop={true}
         spaceBetween={30}
         slidesPerView={4}
         navigation
@@ -63,7 +64,7 @@ export default function People({}) {
       >
         {people.map((people, index) => {
           return (
-            <SwiperSlide key={index} className="slide">
+            <SwiperSlide key={index} className="people-slide">
               <CardPeople name={people.name} born={people.homeworld} />
             </SwiperSlide>
           );
@@ -76,7 +77,7 @@ export default function People({}) {
     <section>
       <Header>
         <h2 className="movie-people">
-          <img src={Friends}></img> People
+          <img src={Friends} alt='logo friends'></img> People
         </h2>
       </Header>
       {loading ? <SwiperLoadingPeople /> : <SwiperPeople />}

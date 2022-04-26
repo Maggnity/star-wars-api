@@ -9,7 +9,7 @@ function Home() {
     <React.Fragment>
       <Head className="head" />
       <Films />
-      <People />
+      <People className=""/>
     </React.Fragment>
   );
 }

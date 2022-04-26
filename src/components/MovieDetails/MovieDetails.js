@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Card } from '@mui/material';
 import { useParams } from "react-router-dom";
 import FetchData from '../../swapi';
@@ -45,3 +45,4 @@ export default function MovieDetails(props){
         </div>
       );
 }
+*/

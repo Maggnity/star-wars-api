@@ -1,44 +1,29 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import People from "../../components/People/People";
 import Reviews from "../../components/Reviews/Reviews";
 import { Button, Typography } from "@mui/material";
 import { Container, Header } from "semantic-ui-react";
 import "./PageMovie.css";
 
-
-
 //Page inicial
-function PageMovie({}) {
-  
-    let history = useNavigate();
-
-    function handleClick(){
-      history.push("/")
-    }
-  
-  let back = (e) => {
-    e.stopPropagation();
-    history.goBack();
-  };
-  const { title, description } = useParams();
-  console.log(title);
+function PageMovie({ title, description }) {
   return (
     <>
       <div>
         <section id="head-film" className="head-film">
           <Container id="container">
             <Header id="header-film">
-              <Typography class="title" width="100%">
+              <Typography className="title" width="100%" conten>
                 {title}
               </Typography>
             </Header>
           </Container>
         </section>
         <div>
-          <Button type="text" onClick={handleClick}>
-            Back
-          </Button>
+          <Link to="/">
+            <Button type="text">Back</Button>
+          </Link>
           <p>{description}</p>
         </div>
       </div>

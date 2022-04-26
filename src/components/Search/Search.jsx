@@ -11,13 +11,13 @@ const Form = styled.div`
 
 function Search() {
   const [find, setFind] = useState("");
-  console.log(find);
+
+  
 
   return (
       <Container component="article" maxWidth="sm">
         <Form
         className="form-search"
-          style={{ alignItems: "center"}}
           onSubmit={(event) => {
             event.preventDefault();
           }}
@@ -28,8 +28,9 @@ function Search() {
               label="Search movies or characters"
               type="search"
               fullWidth
-              inputProps={{ style: { textAlign: "center"} }}
+              inputProps={{ style: { textAlign: "left"} }}
               margin="normal"
+              value={find}
               onChange={(event) => {
               setFind(event.target.value);
               }}

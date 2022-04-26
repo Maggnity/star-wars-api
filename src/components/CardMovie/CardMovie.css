@@ -9,7 +9,7 @@ main {
   background: #ffffff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  height: 60vh;
+  height: 70vh;
   font-family: ubuntu;
   width: 100%;
 }
@@ -37,8 +37,4 @@ main {
 
 .info-logo {
   padding-right: 10px;
-}
-
-.image-film {
-  border-image: solid, 6px linear-gradient(64.17deg, #FF5A56 15.66%, #FF9A42 83.04%) ;
 }

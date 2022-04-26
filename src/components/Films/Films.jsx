@@ -24,7 +24,7 @@ const responsiveSwiper = {
   },
 };
 
-export default function Films({}) {
+export default function Films() {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState([true]);
   try {
@@ -73,7 +73,7 @@ export default function Films({}) {
     <section className="movie-section">
       <Header>
         <h2 className="movie-header">
-          <img src={LogoStar}></img> Movies
+          <img src={LogoStar} alt='logo-star'></img> Movies
         </h2>
       </Header>
 

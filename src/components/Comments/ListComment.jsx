@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardComment from "../CardComment/CardComment";
 import './ListComment.css'
 
+
 class ListComments extends Component {
   render() {
     return (
@@ -13,7 +14,7 @@ class ListComments extends Component {
                   indice={index}
                   name={comment.name}
                   email={comment.email}
-                  commentary={comment.commentary}
+                  comment={comment.comment}
                 />
               </li>
               

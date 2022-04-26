@@ -10,13 +10,13 @@ const CardPeople = ({ name, homeworld }) => (
       <Card id="card-people" className="card-people">
         <Card.Content className="card-content">
           <Image>
-            <img src={User}></img>
+            <img src={User} alt='logo-user'></img>
           </Image>
           <Card.Header id="card-name" className="card-name">
             {name}
           </Card.Header>
-          <Icon name="map-marker">
-            <img src={MapMarker} />
+          <Icon className="map-marker">
+            <img src={MapMarker} alt='logo-map'/>
           </Icon>
           <Card.Description id="card-homeworld" content={homeworld} />
         </Card.Content>

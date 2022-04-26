@@ -13,31 +13,27 @@ class FormCommentary extends Component {
   _handleMudancaName(evento) {
     evento.stopPropagation();
     this.name = evento.target.value;
-    console.log(evento.target.value);
   }
   _handleMudancaEmail(evento) {
     evento.stopPropagation();
     this.email = evento.target.value;
-    console.log(evento.target.value);
 
   }
   _handleMudancaComment(evento) {
     evento.stopPropagation();
     this.comment = evento.target.value;
-    console.log(evento.target.value);
-
   }
 
   _criarComment(evento) {
     evento.preventDefault();
     evento.stopPropagation();
-    console.log(`um comment foi criado ` + this.name + this.email + this.comment);
-
+    this.props.criarComment(this.name, this.email, this.comment)
   }
 
   render() {
     return (
-        <form className="form-comment" onSubmit={this._criarComment.bind(this)}>
+        <form className="form-comment" 
+          onSubmit={this._criarComment.bind(this)}>
           <div className="text-id">
             <TextField
               className="text-name_input"
@@ -47,15 +43,17 @@ class FormCommentary extends Component {
               variant="outlined"
               margin="normal"
               fullWidth
+              required
             />
             <TextField
               className="text-email_input"
               onChange={this._handleMudancaEmail.bind(this)}
-              type="text"
+              type="email"
               placeholder="E-mail"
               variant="outlined"
               margin="normal"
               fullWidth
+              required
             />
           </div>
           <TextField
@@ -68,8 +66,9 @@ class FormCommentary extends Component {
             fullWidth
             multiline
             rows={5}
+            required
           />
-          <Button id="button" className="button-submit">
+          <Button id="button" className="button-submit" onClick={this._criarComment.bind(this)}>
             Enviar
           </Button>
         </form>

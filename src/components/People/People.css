@@ -1,5 +1,3 @@
-
-
 .movie-people {
   font-family: ubuntu;
   font-weight: 100;
@@ -8,4 +6,11 @@
   color: #666666;
   padding-left: 15px;
   padding-top: 30px;
+}
+
+.swiper-people {
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

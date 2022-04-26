@@ -16,13 +16,13 @@ const CardExampleCard = ({ title, description, date, director }) => (
     <Card
       id="card-film"
       className="card-film"
-      onClick={function atchim() {
+      onClick={function atchim(evento) {
         console.log(title, description);
         goMovie(title, description);
       }}
     >
       <Image className="image-film">
-        <img src={Filter} width="100%"></img>
+        <img src={Filter} alt='logo-filter' width="100%"></img>
       </Image>
       <Card.Content id="card-content">
         <Card.Header id="card-title" content={title} />

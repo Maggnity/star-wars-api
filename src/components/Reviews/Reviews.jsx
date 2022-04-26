@@ -1,40 +1,40 @@
 import React, { Component } from "react";
 import { Container, Header } from "semantic-ui-react";
-import ArrayComments from "../../dados/Commentarys";
-import CardComment from "../CardComment/CardComment";
 import FormCommentary from "../Comments/FormCommentary";
 import ListComments from "../Comments/ListComment";
 import "./Reviews.css";
-import LogoComment from '../../assets/img/logo-comment.svg'
+import LogoComment from "../../assets/img/logo-comment.svg";
 
 class Reviews extends Component {
   constructor() {
     super();
     this.state = {
-      comments:[]
+      comments: [],
     };
   }
 
-  criarComment(name, email, comment){
-    console.log(`um comment foi criado ` + this.name + this.email + this.comment);
-
-    const newComment ={name, email, comment}
-    const newArrayComments = [...this.state.comments, newComment];
+  criarComment(name, email, comment) {
+    const newComment = { name, email, comment };
+    const newArrayComments = [newComment, ...this.state.comments];
     const newState = {
-      comments:newArrayComments
-    }
-    this.setState(newState)
+      comments: newArrayComments,
+    };
+
+    this.setState(newState);
+    localStorage.setItem("comments", JSON.stringify(newState));
   }
 
   render() {
     return (
       <section>
         <Header>
-          <h2 className="movie-header"><img src={LogoComment}></img>  Reviews</h2>
+          <h2 className="movie-header">
+            <img src={LogoComment} alt='logo-comment'></img> Reviews
+          </h2>
         </Header>
         <Container id="form-commentary">
           <FormCommentary criarComment={this.criarComment.bind(this)} />
-          <ListComments comments={this.state.comments}/>
+          <ListComments comments={this.state.comments} />
         </Container>
       </section>
     );

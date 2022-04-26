@@ -10,7 +10,7 @@ function Head() {
   return (
     <section id="head" className="head">
       <Container id="head-content">
-          <Typography class="title" width="100%">
+          <Typography className="title" width="100%">
             Star Wars Movie
           </Typography>
           <Search />

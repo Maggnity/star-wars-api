@@ -1,3 +1,31 @@
 #card-comment {
     width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:none
+    
+}
+
+.card-content-comment {
+    display: block;
+    padding-left: 42px;
+}
+
+
+.user-comment {
+    position: block;
+    padding: 10px;
+    height: 100%;
+    float: left;
+}
+
+.dislike{
+    float: left;
+    padding: 5px;
+}
+.like{
+    padding: 5px;
 }
